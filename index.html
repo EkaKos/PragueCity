@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="page" lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praguecity</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo" href="#">
+      <picture>
+        <source media="(max-width: 768px)" srcset="svg/logo-prague-mob.svg" width="120" height="auto">
+        <img src="svg/logo-prague.svg" alt="main_logo_Prague" width="137" height="68">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">menu</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item"><a>Úvod</a></li>
+        <li class="site-list__item"><a class="nav-hotels" href="/assets/hotels.html">Ubytování</a></li>
+        <li class="site-list__item site-list__item--map"><a href="/assets/media.html">Foto a Video</a></li>
+        <li class="site-list__item site-list__item--feedback"><a href="/assets/form.html">Napsat hodnocení</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">
+      welcome to Prague !
+    </h1>
+    <section class="intro">
+      <h2 class="visually-hidden">introduce Prague </h2>
+      <div class="intro__logo">
+        <img src="svg/intro-prague.svg" alt="logo_welcome_to_Prague" width="auto" height="auto">
+      </div>
+      <p class="intro__slogan-text">
+        Nejkrásnější město <br>v srdci Evropy !
+      </p>
+    </section>
+    <section class="advantages">
+      <h2 class="visually-hidden">
+        výhody
+      </h2>
+      <p class="advantages__text">
+        5 důvodů <br> proč navštívit hlavní město
+      </p>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--pic1">
+          <div>
+            <h3 class="advantages__title">
+              Unikátní <br> historické centrum
+            </h3>
+            <p class="advantages__number">— №1 —</p>
+            <p class="advatnages__description">
+              Pražská památková rezervace <br> je jednou z největších na světě
+            </p>
+          </div>
+          <div class="block-pic-1">
+            <div class="hover-block">
+              <div class="hover-conteiner">
+                  <img src="./img/01.jpg" width="360" height="360" alt="">
+              </div>
+              <div class="hover-conteiner">
+                  <img src="./img/02.jpg" width="360" height="360"  alt="">
+              </div>
+              <div class="hover-conteiner">
+                  <img src="./img/03.jpg" width="360" height="360"  alt="">
+              </div>
+          </div>
+          </div>
+        </li>
+
+        <div class="benefits">
+          <h3 class="visually-hidden">
+            benefity
+          </h3>
+          <div class="benefits-wrapper">
+            <ul class="benefits__list">
+              <il class="benefits__item benefits__item--housing">
+                <h4 class="benefits__title">pobyty</h4>
+                <p class="benefits_text"> Pobytové balíčky, Airbnb služba <br> a Luxusní hotely!</p>
+              </il>
+              <il class="benefits__item benefits__item--foods">
+                <h4 class="benefits__title">jídlo</h4>
+                <p class="benefits_text">Ochutnejte Prahu! <br>české a světové speciality</p>
+              </il>
+              <il class="benefits__item benefits__item--gifts">
+                <h4 class="benefits__title">suvenýry</h4>
+                <p class="benefits_text">Originální dárky<br> made in Czech!</p>
+              </il>
+            </ul>
+            <ul class="benefits__list-icon">
+              <li class="house"><img class="img-icon" src="./svg/icon-house.svg" alt=""></li>
+              <li class="burger"><img class="img-icon"  src="./svg/icon-burger.svg" alt=""></li>
+              <li class="gif"><img class="img-icon"  src="./svg/icon-gif.svg" alt=""></li>
+            </ul>
+          </div>
+        </div>
+
+        <li class="advantages__item advantages__item--pic2">
+          <div class="advantages__item-hover-color-block">
+            <h3 class="advantages__title advantages__title--shape">
+              Noční Praha<br>žije!
+            </h3>
+            <p class="advantages__number">— №2 —</p>
+            <p class="advatnages__description">
+              od tradičních českých hospod<br> přes Jazzové kluby a luxusní koktejl bary
+            </p>
+          </div>
+          <div class="block-pic-2"><div class="hover-color-container" id="container"> </div></div>
+        </li>
+        <div class="advantages-tablet-wrapper">
+          <li class="advantages__item">
+            <h3 class="advantages__title">
+              Památky <br>na dosah
+            </h3>
+            <p class="advantages__number">— №3 —</p>
+            <p class="advatnages__description">
+              největší množství památkových objektů <br>soustředěno přímo V centru
+            </p>
+          </li>
+          <li class="advantages__item">
+            <div class="vector-line"></div>
+            <h3 class="advantages__title">
+              Spousta zábavy<br>pro celou rodinu
+            </h3>
+            <p class="advantages__number">— №4 —</p>
+            <p class="advatnages__description">
+              město, kde se nikdo nudit nebude <br> Užijte si to naplno!
+            </p>
+            <div class="vector-line"></div>
+          </li>
+          <li class="advantages__item">
+            <h3 class="advantages__title">
+              Praha<br>pro zamilované
+            </h3>
+            <p class="advantages__number">— №5 —</p>
+            <p class="advatnages__description">
+              Romantická místa <br>a vzpominky na cely zivot
+            </p>
+          </li>
+        </div>
+      </ul>
+    </section>
+
+    <section class="form">
+      <div class="form-wrapper">
+        <h2 class="form__title">
+          MÁTE ZÁJEM ?
+        </h2>
+        <p class="form__text">
+          Zadejte předpokládaný termín svého pobytu, <br>
+          Najdeme pro Vás nejlepší ceny a nabídky hotelů v Praze
+        </p>
+        <a class="search-link button button-action">
+          Vyhledat ubytování
+        </a>
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163930.5032554559!2d14.325538498676588!3d50.059805780816234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraha!5e0!3m2!1scs!2scz!4v1637758942750!5m2!1scs!2scz"
+          width="auto" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    </div>
+    <section class="search-form">
+
+      <div class="search-form-box">
+    
+        <form class="search-form-window " action="http://echo.htmlacademy.ru" method="post">
+    
+          <div class="check-in">
+            <label class="label-search-form" for="appointment-date-checkin">Příjezd:</label>
+            <input class="dateIn date" type="date" name="check-in" id="appointment-date-checkin">
+          </div>
+    
+          <div class="check-out">
+            <label class="label-search-form" for="appointment-date-checkout">Odjezd:</label>
+            <input class="dateOut date" type="date" name="check-out" id="appointment-date-checkout">
+          </div>
+    
+          <div class="form-adults-children">
+            <div class="adults">
+              <label class="label-search-form appointment-adults" for="appointment-adults">Dospělí:</label>
+              <input class="number" type="number" name="number-adults" min="1" max="10" id="appointment-adults"
+                placeholder="2">
+            </div>
+    
+            <div class="children">
+              <label class="label-search-form appointment-children" for="appointment-children">Děti:</label>
+              <input class="number" type="number" name="number-children" min="0" max="10" id="appointment-children"
+                placeholder="0">
+            </div>
+          </div>
+    
+    
+          <button class="button-search" type="submit">hledat</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-wrapper">
+      <div class="contact">
+        <b class="contact__hashtag">#visitPragueCity</b>
+        <b>Copyright © 2022</b>
+      </div>
+      <ul class="social__item">
+        <li class="social__list"><a class="scial__link scial__link--twitter" href="#"><img src="svg/icon-twitter.svg"
+              alt="icon-twitter" width="17px" height="15px"></a></li>
+        <li class="social__list"><a class="scial__link scial__link--fb" href="#"><img src="svg/fb-icon.svg"
+              alt="icon-fb" width="12" height="22"></a></li>
+        <li class="social__list"><a class="scial__link scial__link--youtube" href="#"><img src="svg/youtube-icon.svg"
+              alt="icon-youtube" width="20" height="16"></a></li>
+      </ul>
+      <div class="copyright">
+        <b class="copyright__text">thank's</b>
+        <a href="" class="copyright__link"> <img src="./svg/logoAP.svg" alt="logo-htmlacademy"></a>
+      </div>
+    </div>
+  </footer>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="page" lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praguecity</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/hotels.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo" href="#">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/svg/logo-prague-mob.svg" width="120" height="auto">
+        <img src="/svg/logo-prague.svg" alt="main_logo_Prague" width="137" height="68">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">menu</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item"><a href="/index.html">Úvod</a></li>
+        <li class="site-list__item"><a class="nav-hotels"page-header__logo>Ubytování</a></li>
+        <li class="site-list__item site-list__item--map"><a href="./media.html">Foto a Video</a></li>
+        <li class="site-list__item site-list__item--feedback"><a href="./form.html">Napsat hodnocení</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="intro-section">
+        <div class="wrapper-intro-section">
+            <div class="form-infrastructure">
+                <form class="infrastructure" action="https://echo.htmlacademy.ru" method="get">
+                  <fildset class="fildset-item">
+                   <legend>Zařízení:</legend><br>
+
+                     <p> <input class="visually-hidden filter-input-checkbox
+                         filter-input"  type="checkbox" name="swimmingpool" id="filter-swimmingpool" checked>
+                        <label class="label-checbox" for="filter-swimmingpool">Bazén</label><br>
+                     </p>
+                     <p> <input class="visually-hidden filter-input-checkbox
+                           filter-input"  type="checkbox" name="parking" id="filter-parking">
+                        <label class="label-checbox" for="filter-parking">Parkoviště</label><br>
+                     </p>
+                     <p>
+                        <input class="visually-hidden filter-input-checkbox
+                             filter-input"  type="checkbox" name="Wi-Fi" id="filter-Wi-Fi" checked>
+                        <label class="label-checbox" for="filter-Wi-Fi">Wi-Fi</label>
+                     </p>
+                  </fildset>
+                </form>
+              </div>
+              <div class="form-hausing">
+                  <form class="housing" action="https://echo.htmlacademy.ru" method="get">
+                    <fildset class="fildset-item">
+
+                      <legend>Typ ubytování:</legend><br>
+
+                      <p> <input class="visually-hidden filter-input-checkbox
+                        filter-input"  type="checkbox" name="hotel" id="filter-hotel" checked>
+                         <label class="label-checbox" for="filter-hotel">Hotely</label><br>
+                      </p>
+                      <p> <input class="visually-hidden filter-input-checkbox
+                         filter-input"  type="checkbox" name="motel" id="filter-motel" >
+                        <label class="label-checbox" for="filter-motel">Motely </label><br>
+                      </p>
+                      <p> <input class="visually-hidden filter-input-checkbox
+                         filter-input"  type="checkbox" name="apart" id="filter-apart" checked>
+                        <label class="label-checbox" for="filter-apart">Apartmány</label>
+                      </p>
+
+                    </fildset>
+                  </form>
+               </div>
+               <div class="form-filter">
+                <form class="filtr" action="https://echo.htmlacademy.ru" method="get">
+                  <fieldset class="fieldset-item" >
+
+                       <legend class="price">Cena za 1 noc (Kč):</legend>
+
+                     <div class="range-filter">
+
+                         <div class="range-price">
+                           <label class="min-price">
+                             <input class="input-min-price" type="text" name="min-price" value="od 0">
+                           </label>
+                           <div class="range-stick"></div>
+                           <label class="max-price">
+                             <input class="input-max-price" type="text" name="max-price" value="do 3000">
+                           </label>
+                         </div>
+
+                         <div class="range-control">
+                             <div class="bar"></div>
+                             <div class="toggle toggle-min" tabindex="0"></div>
+                             <div class="toggle toggle-max" tabindex="0"></div>
+                         </div>
+                     </div>
+                 </fieldset>
+               </form>
+                     <button class="button-show" type="submit">Ukázat cenu</button>
+           </div>
+      </div>
+    </section>
+
+<section class="hotel-list">
+       <div class="wrapper-hotel-list">
+            <div class="option-panel">
+                <h2>Nalezeno: 5</h2>
+                <h3>Třídit podle:</h3>
+                <div class="option-list">
+                  <button class="button-price">ceny</button>
+                  <button class="button-type">tipu ubytování</button>
+                  <button class="button-rating">hodnocení</button>
+                </div>
+               <div class="symbols">
+                  &#9650;
+                  &#9660;
+               </div>
+            </div>
+        </div>
+
+        <div class="border-1"></div>
+
+        <div class="wrapper-hotel-list">
+          <div class="hotel-1">
+               <img src="/img/hotel-grand.jpg" width="255" height="174" alt="">
+          <div class="price-wrapper">
+
+           <h3><a class="link-hotel" href="#">Grand Resort & Spa</a></h3>
+             <h4>
+               <span>Hotel</span>
+               <span>od 4000 Kč.</span>
+              </h4>
+            <div class="button-box">
+              <button class="button1">zobrazit</button>
+              <button class="button2">rezervovat</button>
+            </div>
+            </div>
+            <div class="box-rating">
+
+              <div class="stars-block-1">
+
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__1" type="checkbox"  name="rating" checked>
+                  <label class="rating-label" for="stars-rating__1"></label>
+                </p>
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__2" type="checkbox"  name="rating" checked>
+                  <label class="rating-label" for="stars-rating__2"></label>
+                </p>
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__3" type="checkbox" name="rating" checked>
+                  <label class="rating-label" for="stars-rating__3"></label>
+                </p>
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__4" type="checkbox"  name="rating " checked>
+                  <label class="rating-label" for="stars-rating__4"></label>
+                </p>
+
+              </div>
+      
+            <p class="rating">hodnocení: 8,5</p>
+         </div>
+       </div>
+      </div>
+
+       <div class="border-1"></div>
+       <div class="wrapper-hotel-list">
+          <div class="hotel-2">
+               <img src="/img/hotel-city.jpg" width="255" height="174" alt="">
+          <div class="price-wrapper">
+           <h3><a href="#" class="link-hotel">City Quail Inn</a></h3>
+             <h4>
+               <span>Hotel</span>
+               <span>Od 3000 Kč.</span>
+             </h4>
+            <div class="button-box">
+              <button class="button1">zobrazit</button>
+              <button class="button2">rezervovat</button>
+            </div>
+            </div>
+            <div class="box-rating">
+
+              <div class="stars-block-1">
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__5" type="checkbox"  name="rating" checked>
+                  <label class="rating-label" for="stars-rating__5"></label>
+                </p>
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__6" type="checkbox" name="rating" checked>
+                  <label class="rating-label" for="stars-rating__6"></label>
+                </p>
+
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__7" type="checkbox"  name="rating" checked>
+                  <label class="rating-label" for="stars-rating__7"></label>
+                </p>
+                <p class="stars-block-item">
+                  <input class="visually-hidden  rating-input" id="stars-rating__7" type="checkbox"  name="rating" checked>
+                  <label class="rating-label" for="stars-rating__7"></label>
+                </p>
+
+            </div>
+            <p class="rating">hodnocení: 8,9</p>
+         </div>
+        </div>
+      </div>
+
+
+       <div class="border-1"></div>
+
+       <div class="wrapper-hotel-list">
+        <div class="hotel-3">
+             <img src="/img/hotel-village.jpg" width="255" height="174" alt="">
+        <div class="price-wrapper">
+         <h3><a class="link-hotel" href="#">Village Style</a></h3>
+           <h4>
+             <span>Apartmány</span>
+             <span>od 5000 Kč.</span>
+            </h4>
+          <div class="button-box">
+            <button class="button1">zobrazit</button>
+            <button class="button2">rezervovat</button>
+          </div>
+          </div>
+          <div class="box-rating">
+
+            <div class="stars-block-1">
+
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__8" type="checkbox" name="rating" checked>
+                <label class="rating-label" for="stars-rating__8"></label>
+              </p>
+
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__9" type="checkbox"  name="rating" checked>
+                <label class="rating-label" for="stars-rating__9"></label>
+              </p>
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__8" type="checkbox" name="rating" checked>
+                <label class="rating-label" for="stars-rating__8"></label>
+              </p>
+
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__9" type="checkbox"  name="rating" checked>
+                <label class="rating-label" for="stars-rating__9"></label>
+              </p>
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__9" type="checkbox"  name="rating" checked>
+                <label class="rating-label" for="stars-rating__9"></label>
+              </p>
+          </div>
+          <p class="rating">hodnocení: 9,2</p>
+       </div>
+     </div>
+   </div>
+     <div class="border-1"></div>
+     <div class="wrapper-hotel-list">
+        <div class="hotel-4">
+             <img src="/img/hotel-motel.jpg" width="255" height="174" alt="">
+        <div class="price-wrapper">
+         <h3><a href="#" class="link-hotel">Motel Home</a></h3>
+           <h4>
+             <span>Motel</span>
+             <span>Od 3000 Kč.</span>
+           </h4>
+          <div class="button-box">
+            <button class="button1">zobrazit</button>
+            <button class="button2">rezervovat</button>
+          </div>
+          </div>
+          <div class="box-rating">
+
+            <div class="stars-block-1">
+
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__5" type="checkbox"  name="rating" checked>
+                <label class="rating-label" for="stars-rating__5"></label>
+              </p>
+
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__6" type="checkbox" name="rating" checked>
+                <label class="rating-label" for="stars-rating__6"></label>
+              </p>
+
+              <p class="stars-block-item">
+                <input class="visually-hidden  rating-input" id="stars-rating__7" type="checkbox"  name="rating" checked>
+                <label class="rating-label" for="stars-rating__7"></label>
+              </p>
+
+          </div>
+          <p class="rating">hodnocení: 7,9</p>
+       </div>
+      </div>
+    </div>
+
+
+     <div class="border-1"></div>
+
+     <div class="wrapper-hotel-list">
+      <div class="hotel-5">
+           <img src="/img/hotel-vintage.jpg" width="255" height="174" alt="">
+      <div class="price-wrapper">
+       <h3><a class="link-hotel" href="#">Old Vintage</a></h3>
+         <h4>
+           <span>Hotel</span>
+           <span>od 4000 Kč.</span>
+          </h4>
+        <div class="button-box">
+          <button class="button1">zobrazit</button>
+          <button class="button2">rezervovat</button>
+        </div>
+        </div>
+        <div class="box-rating">
+
+          <div class="stars-block-1">
+
+            <p class="stars-block-item">
+              <input class="visually-hidden  rating-input" id="stars-rating__8" type="checkbox" name="rating" checked>
+              <label class="rating-label" for="stars-rating__8"></label>
+            </p>
+
+            <p class="stars-block-item">
+              <input class="visually-hidden  rating-input" id="stars-rating__9" type="checkbox"  name="rating" checked>
+              <label class="rating-label" for="stars-rating__9"></label>
+            </p>
+            <p class="stars-block-item">
+              <input class="visually-hidden  rating-input" id="stars-rating__8" type="checkbox" name="rating" checked>
+              <label class="rating-label" for="stars-rating__8"></label>
+            </p>
+
+            <p class="stars-block-item">
+              <input class="visually-hidden  rating-input" id="stars-rating__9" type="checkbox"  name="rating" checked>
+              <label class="rating-label" for="stars-rating__9"></label>
+            </p>
+        </div>
+        <p class="rating">hodnocení: 8,2</p>
+     </div>
+   </div>
+ </div>
+   <div class="border-1"></div>
+</section>
+
+  </main>
+  <footer class="page-footer">
+    <div class="footer-wrapper">
+      <div class="contact">
+        <b class="contact__hashtag">#visitPragueCity</b>
+      </div>
+      <ul class="social__item">
+        <li class="social__list"><a class="scial__link scial__link--twitter" href="#"><img src="/svg/icon-twitter.svg"
+              alt="icon-twitter" width="17px" height="15px"></a></li>
+        <li class="social__list"><a class="scial__link scial__link--fb" href="#"><img src="/svg/fb-icon.svg"
+              alt="icon-fb" width="12" height="22"></a></li>
+        <li class="social__list"><a class="scial__link scial__link--youtube" href="#"><img src="/svg/youtube-icon.svg"
+              alt="icon-youtube" width="20" height="16"></a></li>
+      </ul>
+      <div class="copyright">
+        <b class="copyright__text">thank's</b>
+        <a href="" class="copyright__link"> <img src="/svg/logoAP.svg" alt="logo"></a>
+      </div>
+    </div>
+  </footer>
+ <script src="/js/main.js"></script>
+</body>
+
+</html>

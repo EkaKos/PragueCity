@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="page"  lang="cs">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Praguecity</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/form.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	  </head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo" href="/index.html">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/svg/logo-prague-mob.svg" width="120" height="auto">
+        <img src="/svg/logo-prague.svg" alt="main_logo_Prague" width="137" height="68">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">menu</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item"><a href="/index.html">Úvod</a></li>
+        <li class="site-list__item"><a class="nav-hotels" href="./hotels.html">Ubytování</a></li>
+        <li class="site-list__item site-list__item--map"><a href="./media.html">Foto a Video</a></li>
+        <li class="site-list__item site-list__item--feedback"><a>Napsat hodnocení</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">
+      welcome to Prague !
+    </h1>
+	<section class="intro">
+		<h2 class="visually-hidden">introduce Prague </h2>
+	
+		<p class="intro__slogan-text">
+		  Nejkrásnější město <br>v srdci Evropy !
+		</p>
+	  </section>
+  <main>
+
+		<div class="form__wrapper">
+			<form id="form" action="/echo" method="post">
+				<div class="form__header">
+					<div class="form__title form__title_header">Přidání hodnocení nebo recenze</div>
+					<div class="form__text">Podělte se o svoje zkušenosti a pomozte ostatním při rozhodování, přidejte hodnocení a recenze</div>
+				</div>
+				<div class="form__item form__item_name">
+					<div class="form__title form__title_left">Představte se :</div>
+					
+					<label for="name" class="form__label">
+					<span class="form__caption">Jméno:</span>
+						<input id="name" type="text" class="form__input form__input_name" placeholder="Peter" required>
+					</label>
+					<label for="surname" class="form__label">
+					<span class="form__caption">Příjmení:</span>
+						<input id="surname" type="text" class="form__input form__input_name form__input_surname" placeholder="Novák" required>
+					</label>
+				</div>
+				
+				<div class="form__item form__item_contacts">
+					<div class="form__title form__title_contacts">Základní kontaktní údaje:</div>
+					<label for="tel" class="form__label form__label_contacts form__label_tel">
+						<span class="form__caption form__caption_contacts"><span class="form__caption_desktop">telefonní </span>číslo: </span>
+						<span class="form__inputWrapper form__inputWrapper_tel"><input class="form__input form__input_contacts form__input_tel" id="tel" type="tel" name="tel" placeholder="+420 111 222 333" required></span>
+						<span class="form__caption form__caption_contacts form__error form__error_tel">
+							Chyba, zkontrolujte telefonní číslo
+						</span>
+					</label>
+					<label for="email" class="form__label form__label_contacts form__label_email">
+						<span class="form__caption form__caption_contacts">E-mail: </span>
+						<span class="form__inputWrapper form__inputWrapper_email"><input class="form__input form__input_contacts form__input_email" id="email" type="email" name="email" placeholder="novak@seznam.cz" required></span>
+						<span class="form__caption form__caption_contacts form__error form__error_email">
+							Chyba, zkontrolujte e-mail
+						</span>
+					</label>
+					
+				</div>
+				
+				
+				<div class="form__item form__item_impression">
+					<div class="form__title form__title_left form__title_impression">Celkový dojem z ubytování a poskytovaných služeb:</div>
+					<input class="form__input form__input_hidden" id="good" type="radio" name="impression" value="good" checked>
+					<label class="form__label form__label_click form__label_radio" for="good">Spíš pozitivní</label>
+					<input id="bad" class="form__input form__input_hidden" type="radio" name="impression" value="bad">
+					<label class="form__label form__label_click form__label_radio" for="bad">Spíš negativní</label>
+					<input id="dunno" class="form__input form__input_hidden" type="radio" name="impression" value="dunno">
+					<label class="form__label form__label_click form__label_radio" for="dunno">Těžko odpovědět</label>
+				</div>
+				
+				
+				<div class="form__item form__item_places">
+					<div class="form__title form__title_places">Ohodnoťte navštívená místa:</div>
+					
+					<div class="form__inner">
+							<input id="Devil" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">
+							<label class="form__label form__label_click form__label_checkbox" for="Devil">Malá Strana</label>
+							<input id="Slide" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">
+							<label class="form__label form__label_click form__label_checkbox" for="Slide">Národní muzeum</label>
+							<input id="BellMountain" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">
+							<label class="form__label form__label_click form__label_checkbox" for="BellMountain">Václavské náměstí</label>
+							<input id="RedRocks" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">
+							<label class="form__label form__label_click form__label_checkbox" for="RedRocks">Staronovou synagogou</label>
+						</div>
+					
+				</div>
+				
+				<div class="form__item">
+					<div class="form__title form__title_emotions">Napište recenzi:</div>
+					<span>Řekněte ostatním, co se Vám líbilo na destinacích, které jste navštívili</span>
+					
+					<textarea class="form__input form__input_emotions" name="emotions" id="emotions" cols="30" rows="10"> </textarea>
+					
+					<button class="button button-send">
+						Odeslat hodnocení
+					</button>
+					
+					<span class="form__reminder">* &#8212; Povinné údaje</span>
+				</div>
+				
+				
+			</form>
+		</div>
+
+  </main>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
