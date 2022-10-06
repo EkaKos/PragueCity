@@ -44,7 +44,7 @@
   <main>
 
 		<div class="form__wrapper">
-			<form id="form" action="/echo" method="post">
+			<form class="form" id="feedbackForm" >
 				<div class="form__header">
 					<div class="form__title form__title_header">Přidání hodnocení nebo recenze</div>
 					<div class="form__text">Podělte se o svoje zkušenosti a pomozte ostatním při rozhodování, přidejte hodnocení a recenze</div>
@@ -54,26 +54,26 @@
 					
 					<label for="name" class="form__label">
 					<span class="form__caption">Jméno:</span>
-						<input id="name" type="text" class="form__input form__input_name" placeholder="Peter" required>
+						<input name="name" id="name" type="text" class="form__input form__input_name" required>
 					</label>
 					<label for="surname" class="form__label">
 					<span class="form__caption">Příjmení:</span>
-						<input id="surname" type="text" class="form__input form__input_name form__input_surname" placeholder="Novák" required>
+						<input name="surname" id="surname" type="text" class="form__input form__input_name form__input_surname"  required>
 					</label>
 				</div>
 				
 				<div class="form__item form__item_contacts">
 					<div class="form__title form__title_contacts">Základní kontaktní údaje:</div>
 					<label for="tel" class="form__label form__label_contacts form__label_tel">
-						<span class="form__caption form__caption_contacts"><span class="form__caption_desktop">telefonní </span>číslo: </span>
-						<span class="form__inputWrapper form__inputWrapper_tel"><input class="form__input form__input_contacts form__input_tel" id="tel" type="tel" name="tel" placeholder="+420 111 222 333" required></span>
+						<span class="form__caption form__caption_contacts">Telefonní číslo:<span class="form__caption_desktop"></span> </span>
+						<span class="form__inputWrapper form__inputWrapper_tel"><input class="form__input form__input_contacts form__input_tel" id="tel" type="tel" name="tel" required></span>
 						<span class="form__caption form__caption_contacts form__error form__error_tel">
 							Chyba, zkontrolujte telefonní číslo
 						</span>
 					</label>
 					<label for="email" class="form__label form__label_contacts form__label_email">
 						<span class="form__caption form__caption_contacts">E-mail: </span>
-						<span class="form__inputWrapper form__inputWrapper_email"><input class="form__input form__input_contacts form__input_email" id="email" type="email" name="email" placeholder="novak@seznam.cz" required></span>
+						<span class="form__inputWrapper form__inputWrapper_email"><input class="form__input form__input_contacts form__input_email" id="email" type="email" name="email"  required></span>
 						<span class="form__caption form__caption_contacts form__error form__error_email">
 							Chyba, zkontrolujte e-mail
 						</span>
@@ -104,7 +104,7 @@
 							<input id="BellMountain" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">
 							<label class="form__label form__label_click form__label_checkbox" for="BellMountain">Václavské náměstí</label>
 							<input id="RedRocks" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">
-							<label class="form__label form__label_click form__label_checkbox" for="RedRocks">Staronovou synagogou</label>
+							<label class="form__label form__label_click form__label_checkbox" for="RedRocks">Staronová synagoga</label>
 						</div>
 					
 				</div>
@@ -121,13 +121,12 @@
 					
 					<span class="form__reminder">* &#8212; Povinné údaje</span>
 				</div>
-				
-				
 			</form>
 		</div>
 
   </main>
   <script src="/js/main.js"></script>
+  <script src="/js/form.js"></script>
 </body>
 
 </html>

@@ -1,26 +1,28 @@
-	//VIDEO PLAYER SCRIPT
+
 	
-	let vid, video__pause, video__seek, video__bar, video__time, video__timeTotal, video__mute, video__volume, video__soundBar, fullscreenbtn;
+	let vid, videoPause, videoSeek,vidRep, videoBar, videoMute, videoVolume, videoSoundBar, fullscreenbtn;
 	
 	function intializePlayer(){
 	
 	vid = document.querySelector(".my_video");
-	video__seek = document.querySelector(".video__seek");
-	video__bar = document.querySelector(".video__bar");
-    video__pause = document.querySelector(".video__pause");
-		video__time = document.querySelector(".video__time");
-	video__timeTotal = document.querySelector(".video__time-total");
-	video__mute = document.querySelector(".video__mute");
+	videoSeek = document.querySelector(".video__seek");
+	videoBar = document.querySelector(".video__bar");
+    videoPause = document.querySelector(".video__pause");
+	videoMute = document.querySelector(".video__mute");
+	vidRep = document.querySelector(".video__replay");
 
 	fullscreenbtn = document.querySelector(".fullscreenbtn");
 	
 	vid.addEventListener("click",playPause,false);
 	vid.addEventListener("timeupdate",seektimeupdate,false);
-fullscreenbtn.addEventListener("click",toggleFullScreen,false);	
-	
+    fullscreenbtn.addEventListener("click",toggleFullScreen,false);	
+	vidRep.addEventListener("click",()=>{
+		vid.currentTime = 0;
+	})
+	videoPause.addEventListener("click",playPause,false)
 
 	const timeDrag = false; /* Drag status */
-	video__seek.addEventListener( "pointerdown" , function(event) {
+	videoSeek.addEventListener( "pointerdown" , function(event) {
 		timeDrag = true;
 		updatebar(event.pageX);
 	});
@@ -35,24 +37,23 @@ fullscreenbtn.addEventListener("click",toggleFullScreen,false);
 			updatebar(event.pageX);
 		}
 	});
-	
-	
 }
-window.onload = intializePlayer;
-function playPause(){
+
+  window.onload = intializePlayer;
+  function playPause(){
 	if(vid.paused){
 		vid.play();
 		vid.style.background = "#00000099";
-		video__pause.style.backgroundImage = "url(/svg/play.svg)";
+		videoPause.style.backgroundImage="url(../svg/play.svg)";
 	} else {
 		vid.pause();
-		video__pause.style.backgroundImage = "url(/svg/pause.svg)";
+		videoPause.style.backgroundImage = "url(../svg/pause.svg)";
 	}
 }
 	
 
-const updatebar = function(x) {
-	const progress = video__seek;
+   const updatebar = function(x) {
+	const progress = videoSeek;
 	const maxduration = vid.duration;
 	const position = x - progress.getBoundingClientRect().left;
 	const percentage = 100 * position / progress.offsetWidth;
@@ -65,13 +66,13 @@ const updatebar = function(x) {
 	}
 	
 //	Update progress bar and video currenttime
-	video__bar.style.width = percentage + "%";
+	videoBar.style.width = percentage + "%";
 	vid.currentTime = maxduration * percentage / 100;
 	
 };
 
-const updateSound = function(x) {
-	const progress = video__volume;
+  const updateSound = function(x) {
+	const progress = videoVolume;
 	const position = x - progress.getBoundingClientRect().left;
 	const percentage = 100 * position / progress.offsetWidth;
 	
@@ -82,42 +83,29 @@ const updateSound = function(x) {
 		percentage = 0;
 	}
 	
-	video__soundBar.style.width = percentage + "%";
-	vid.volume = percentage / 100;
-
-	
+	videoSoundBar.style.width = percentage + "%";
+	vid.volume = percentage / 100;	
 };
 	
 function seektimeupdate(){
 	const currentPos = vid.currentTime;
 	const maxduration = vid.duration;
 	const percentage = 100 * currentPos / maxduration;
-	video__bar.style.width=percentage+"%";
-	
-	const curmins = Math.floor(vid.currentTime / 60);
-	const cursecs = Math.floor(vid.currentTime - curmins * 60);
-	const durmins = Math.floor(vid.duration / 60);
-	const dursecs = Math.floor(vid.duration - durmins * 60);
-	if(cursecs < 10){ cursecs = "0"+cursecs; }
-	if(dursecs < 10){ dursecs = "0"+dursecs; }
-	if(curmins < 10){ curmins = "0"+curmins; }
-	if(durmins < 10){ durmins = "0"+durmins; }
-	video__time.innerHTML = curmins+":"+cursecs;
-	video__timeTotal.innerHTML = durmins+":"+dursecs;
+	videoBar.style.width=percentage + "%";
 }
 
 function vidmute(){
 	if(vid.muted){
 		vid.muted = false;
-		video__mute.style.backgroundClip="border-box";
+		videoMute.style.backgroundClip="border-box";
 	} else {
 		vid.muted = true;
-		video__mute.style.backgroundClip="content-box";
+		videoMute.style.backgroundClip="content-box";
 	}
 }
 
 function setvolume(){
-	vid.volume = video__volume.value / 100;
+	vid.volume = videoVolume.value / 100;
 }
 
 function toggleFullScreen(){
@@ -130,4 +118,3 @@ function toggleFullScreen(){
 	}
 }
 	
-	//END OF VIDEO PLAYER SCRIPT

@@ -754,7 +754,7 @@ transform: translate(-50%);
   }
 }
 
-.form {
+.form-conteiner {
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -864,7 +864,6 @@ h3 {
   padding: 40px;
 }
 
-
 .search-form {
   position: relative;
 }
@@ -890,7 +889,7 @@ input::placeholder{
 }
 
 
-.search-form-window {
+.search-form {
   margin: 0 auto;
   width: 458px;
   font-weight: 700;

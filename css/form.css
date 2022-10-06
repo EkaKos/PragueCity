@@ -546,7 +546,7 @@ background-color: rgb(237, 237, 237);
   
     .form__label_tel {
       float: left;
-      width: 400px;
+  
     }
   
     .form__label_email {
@@ -557,6 +557,7 @@ background-color: rgb(237, 237, 237);
     .form__caption_contacts {
       display: inline;
       padding-left: 0;
+      padding-right: 50px;
       line-height: 58px;
     }
   

@@ -1,0 +1,597 @@
+warning: LF will be replaced by CRLF in assets/form.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in css/style.css.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+[1mdiff --git a/assets/form.html b/assets/form.html[m
+[1mindex 1a73b92..3e29783 100644[m
+[1m--- a/assets/form.html[m
+[1m+++ b/assets/form.html[m
+[36m@@ -44,7 +44,7 @@[m
+   <main>[m
+ [m
+ 		<div class="form__wrapper">[m
+[31m-			<form id="form" action="/echo" method="post">[m
+[32m+[m			[32m<form class="form" id="feedbackForm" >[m
+ 				<div class="form__header">[m
+ 					<div class="form__title form__title_header">Přidání hodnocení nebo recenze</div>[m
+ 					<div class="form__text">Podělte se o svoje zkušenosti a pomozte ostatním při rozhodování, přidejte hodnocení a recenze</div>[m
+[36m@@ -54,26 +54,26 @@[m
+ 					[m
+ 					<label for="name" class="form__label">[m
+ 					<span class="form__caption">Jméno:</span>[m
+[31m-						<input id="name" type="text" class="form__input form__input_name" placeholder="Peter" required>[m
+[32m+[m						[32m<input name="name" id="name" type="text" class="form__input form__input_name" required>[m
+ 					</label>[m
+ 					<label for="surname" class="form__label">[m
+ 					<span class="form__caption">Příjmení:</span>[m
+[31m-						<input id="surname" type="text" class="form__input form__input_name form__input_surname" placeholder="Novák" required>[m
+[32m+[m						[32m<input name="surname" id="surname" type="text" class="form__input form__input_name form__input_surname"  required>[m
+ 					</label>[m
+ 				</div>[m
+ 				[m
+ 				<div class="form__item form__item_contacts">[m
+ 					<div class="form__title form__title_contacts">Základní kontaktní údaje:</div>[m
+ 					<label for="tel" class="form__label form__label_contacts form__label_tel">[m
+[31m-						<span class="form__caption form__caption_contacts"><span class="form__caption_desktop">telefonní </span>číslo: </span>[m
+[31m-						<span class="form__inputWrapper form__inputWrapper_tel"><input class="form__input form__input_contacts form__input_tel" id="tel" type="tel" name="tel" placeholder="+420 111 222 333" required></span>[m
+[32m+[m						[32m<span class="form__caption form__caption_contacts">Telefonní číslo:<span class="form__caption_desktop"></span> </span>[m
+[32m+[m						[32m<span class="form__inputWrapper form__inputWrapper_tel"><input class="form__input form__input_contacts form__input_tel" id="tel" type="tel" name="tel" required></span>[m
+ 						<span class="form__caption form__caption_contacts form__error form__error_tel">[m
+ 							Chyba, zkontrolujte telefonní číslo[m
+ 						</span>[m
+ 					</label>[m
+ 					<label for="email" class="form__label form__label_contacts form__label_email">[m
+ 						<span class="form__caption form__caption_contacts">E-mail: </span>[m
+[31m-						<span class="form__inputWrapper form__inputWrapper_email"><input class="form__input form__input_contacts form__input_email" id="email" type="email" name="email" placeholder="novak@seznam.cz" required></span>[m
+[32m+[m						[32m<span class="form__inputWrapper form__inputWrapper_email"><input class="form__input form__input_contacts form__input_email" id="email" type="email" name="email"  required></span>[m
+ 						<span class="form__caption form__caption_contacts form__error form__error_email">[m
+ 							Chyba, zkontrolujte e-mail[m
+ 						</span>[m
+[36m@@ -104,7 +104,7 @@[m
+ 							<input id="BellMountain" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">[m
+ 							<label class="form__label form__label_click form__label_checkbox" for="BellMountain">Václavské náměstí</label>[m
+ 							<input id="RedRocks" class="form__input form__input_hidden" type="checkbox" name="places" value="dunno">[m
+[31m-							<label class="form__label form__label_click form__label_checkbox" for="RedRocks">Staronovou synagogou</label>[m
+[32m+[m							[32m<label class="form__label form__label_click form__label_checkbox" for="RedRocks">Staronová synagoga</label>[m
+ 						</div>[m
+ 					[m
+ 				</div>[m
+[36m@@ -121,13 +121,12 @@[m
+ 					[m
+ 					<span class="form__reminder">* &#8212; Povinné údaje</span>[m
+ 				</div>[m
+[31m-				[m
+[31m-				[m
+ 			</form>[m
+ 		</div>[m
+ [m
+   </main>[m
+   <script src="/js/main.js"></script>[m
+[32m+[m[32m  <script src="/js/form.js"></script>[m
+ </body>[m
+ [m
+ </html>[m
+[1mdiff --git a/assets/hotels.html b/assets/hotels.html[m
+[1mindex da4e34a..b43ad25 100644[m
+[1m--- a/assets/hotels.html[m
+[1m+++ b/assets/hotels.html[m
+[36m@@ -94,10 +94,10 @@[m
+                            </label>[m
+                          </div>[m
+ [m
+[31m-                         <div class="range-control">[m
+[32m+[m[32m                         <div id="slider" class="range-control">[m
+                              <div class="bar"></div>[m
+[31m-                             <div class="toggle toggle-min" tabindex="0"></div>[m
+[31m-                             <div class="toggle toggle-max" tabindex="0"></div>[m
+[32m+[m[32m                             <div class="thumb toggle toggle-min" tabindex="0"></div>[m
+[32m+[m[32m                             <div class="thumb toggle toggle-max" tabindex="0"></div>[m
+                          </div>[m
+                      </div>[m
+                  </fieldset>[m
+[36m@@ -373,6 +373,7 @@[m
+     </div>[m
+   </footer>[m
+  <script src="/js/main.js"></script>[m
+[32m+[m[32m <script src="/js/hotels.js"></script>[m
+ </body>[m
+ [m
+ </html>[m
+\ No newline at end of file[m
+[1mdiff --git a/assets/media.html b/assets/media.html[m
+[1mindex 3acf271..3f0d062 100644[m
+[1m--- a/assets/media.html[m
+[1m+++ b/assets/media.html[m
+[36m@@ -143,7 +143,7 @@[m
+                       <div class="photos__text">Podívejte se na úžasné záběry Prahy z dronu</div>[m
+                   </div>[m
+                 [m
+[31m-                    <div class="background-conteiner">[m
+[32m+[m[32m                    <div class="background-conteiner ">[m
+                         <div class="video">  [m
+                             <video class="my_video" width="100%" height="auto" preload="none">[m
+                                 <source src="/video/videoplayback.mp4"[m
+[36m@@ -169,6 +169,8 @@[m
+                                     <div class="video__seek">[m
+                                         <div class="video__scale">[m
+                                             <div class="video__bar"></div>[m
+[32m+[m[32m                                            <div class="video__time"></div>[m
+[32m+[m[32m                                            <div class="videoTime-total"></div>[m
+                                         </div>[m
+                                     </div>[m
+                                 </div>[m
+[1mdiff --git a/css/form.css b/css/form.css[m
+[1mindex 0646af1..a774b60 100644[m
+[1m--- a/css/form.css[m
+[1m+++ b/css/form.css[m
+[36m@@ -546,7 +546,7 @@[m [mbackground-color: rgb(237, 237, 237);[m
+   [m
+     .form__label_tel {[m
+       float: left;[m
+[31m-      width: 400px;[m
+[32m+[m[41m  [m
+     }[m
+   [m
+     .form__label_email {[m
+[36m@@ -557,6 +557,7 @@[m [mbackground-color: rgb(237, 237, 237);[m
+     .form__caption_contacts {[m
+       display: inline;[m
+       padding-left: 0;[m
+[32m+[m[32m      padding-right: 50px;[m
+       line-height: 58px;[m
+     }[m
+   [m
+[1mdiff --git a/css/hotels.css b/css/hotels.css[m
+[1mindex 02a0876..6300aab 100644[m
+[1m--- a/css/hotels.css[m
+[1m+++ b/css/hotels.css[m
+[36m@@ -1,5 +1,3 @@[m
+[31m-[m
+[31m-[m
+ img{[m
+     border-radius: 3px;[m
+ }[m
+[36m@@ -120,11 +118,13 @@[m [mimg{[m
+     margin: 0;[m
+     bottom: 10px;[m
+     left: 0;[m
+[32m+[m[32m    cursor: pointer;[m
+   }[m
+   [m
+   .range-control .toggle-max {[m
+     margin: 0;[m
+     left: 238px;[m
+[32m+[m[32m    cursor: pointer;[m
+   }[m
+   [m
+   .range-filter {[m
+[1mdiff --git a/css/media.css b/css/media.css[m
+[1mindex 012e675..b6ad818 100644[m
+[1m--- a/css/media.css[m
+[1m+++ b/css/media.css[m
+[36m@@ -94,11 +94,12 @@[m [mcolor: #fff;[m
+     margin: 0 auto;[m
+     padding: 25px;[m
+     box-sizing: border-box;[m
+[32m+[m[32m    width: fit-content;[m
+     font-size: 0;[m
+     z-index: 1;[m
+     background-color: #e8725e;[m
+   }[m
+[31m-  [m
+[32m+[m
+   .video__seekWrapper {[m
+     box-sizing: border-box;[m
+     position: absolute;[m
+[36m@@ -140,6 +141,7 @@[m [mcolor: #fff;[m
+   .video__replay {[m
+     margin-left: 3px;[m
+     margin-right: 135px;[m
+[32m+[m[32m    cursor: pointer;[m
+   }[m
+ .video__pause{[m
+     width: 20px;[m
+[36m@@ -148,6 +150,7 @@[m [mcolor: #fff;[m
+     background-repeat: no-repeat;[m
+     background-position: center;[m
+      background-size: contain;[m
+[32m+[m[32m     cursor: pointer;[m
+ }[m
+   [m
+   .video__subtitle {[m
+[36m@@ -307,6 +310,7 @@[m [mcolor: #fff;[m
+     .video__controls {[m
+       position: absolute;[m
+       display: flex;[m
+[32m+[m[32m      align-items: center;[m
+       left: 0;[m
+       right: 0;[m
+       width: fit-content;[m
+[36m@@ -339,8 +343,9 @@[m [mcolor: #fff;[m
+       align-self: center;[m
+     }[m
+     .video__pause{[m
+[31m-        width: 25px;[m
+[31m-        height: 25px;[m
+[32m+[m[32m        width: 20px;[m
+[32m+[m[32m        height: 20px;[m
+[32m+[m[32m        padding: 0;[m
+     }[m
+     .video__btn:hover {[m
+       opacity: 1;[m
+[36m@@ -425,6 +430,9 @@[m [mcolor: #fff;[m
+     }[m
+   .video__btn{[m
+     padding: 15px;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  .video__btn:first-child{[m
+[32m+[m[32m    padding: 0;[m
+   }[m
+     .my_video {[m
+       width: 800px;[m
+[36m@@ -437,10 +445,17 @@[m [mcolor: #fff;[m
+     }[m
+   }[m
+   .video__controls{[m
+[31m-    padding: 9px;[m
+[32m+[m[32m  width: 100%;[m
+   }[m
+   @media (max-width: 1200px){[m
+     .video__controls{[m
+[31m-        padding: 12px;[m
+[32m+[m[32m        padding: 16px;[m
+[32m+[m[32m  width: fit-content;[m
+[32m+[m
+       }[m
+[32m+[m[32m  }[m
+[32m+[m[32m  @media (max-width: 767px){[m
+[32m+[m[32m    .video__controls{[m
+[32m+[m[32m      width: 100%;[m
+[32m+[m[32m    }[m
+   }[m
+\ No newline at end of file[m
+[1mdiff --git a/css/style.css b/css/style.css[m
+[1mindex 9e08398..cc59855 100644[m
+[1m--- a/css/style.css[m
+[1m+++ b/css/style.css[m
+[36m@@ -754,7 +754,7 @@[m [mtransform: translate(-50%);[m
+   }[m
+ }[m
+ [m
+[31m-.form {[m
+[32m+[m[32m.form-conteiner {[m
+   margin: 0 auto;[m
+   background-color: #ffffff;[m
+ }[m
+[36m@@ -864,7 +864,6 @@[m [mh3 {[m
+   padding: 40px;[m
+ }[m
+ [m
+[31m-[m
+ .search-form {[m
+   position: relative;[m
+ }[m
+[36m@@ -890,7 +889,7 @@[m [minput::placeholder{[m
+ }[m
+ [m
+ [m
+[31m-.search-form-window {[m
+[32m+[m[32m.search-form {[m
+   margin: 0 auto;[m
+   width: 458px;[m
+   font-weight: 700;[m
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 290e653..4fcea59 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -4,7 +4,7 @@[m
+ <head>[m
+   <meta charset="UTF-8">[m
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[31m-  <title>Praguecity</title>[m
+[32m+[m[32m  <title>PragueCity</title>[m
+   <link rel="stylesheet" href="css/style.css">[m
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">[m
+ </head>[m
+[36m@@ -148,7 +148,7 @@[m
+       </ul>[m
+     </section>[m
+ [m
+[31m-    <section class="form">[m
+[32m+[m[32m    <section class="form-conteiner">[m
+       <div class="form-wrapper">[m
+         <h2 class="form__title">[m
+           MÁTE ZÁJEM ?[m
+[36m@@ -169,16 +169,16 @@[m
+ [m
+       <div class="search-form-box">[m
+     [m
+[31m-        <form class="search-form-window " action="http://echo.htmlacademy.ru" method="post">[m
+[32m+[m[32m        <form id="searchForm"  class="search-form form">[m
+     [m
+           <div class="check-in">[m
+             <label class="label-search-form" for="appointment-date-checkin">Příjezd:</label>[m
+[31m-            <input class="dateIn date" type="date" name="check-in" id="appointment-date-checkin">[m
+[32m+[m[32m            <input class="date-in date" type="date" name="check-in" id="appointment-date-checkin">[m
+           </div>[m
+     [m
+           <div class="check-out">[m
+             <label class="label-search-form" for="appointment-date-checkout">Odjezd:</label>[m
+[31m-            <input class="dateOut date" type="date" name="check-out" id="appointment-date-checkout">[m
+[32m+[m[32m            <input class="date-out date" type="date" name="check-out" id="appointment-date-checkout">[m
+           </div>[m
+     [m
+           <div class="form-adults-children">[m
+[36m@@ -194,8 +194,6 @@[m
+                 placeholder="0">[m
+             </div>[m
+           </div>[m
+[31m-    [m
+[31m-    [m
+           <button class="button-search" type="submit">hledat</button>[m
+         </form>[m
+       </div>[m
+[36m@@ -224,6 +222,8 @@[m
+   </footer>[m
+ [m
+ <script src="js/main.js"></script>[m
+[32m+[m[32m<script src="js/search-form.js"></script>[m
+[32m+[m[32m<script src="js/hover-board.js"></script>[m
+ [m
+ </body>[m
+ [m
+[1mdiff --git a/js/main.js b/js/main.js[m
+[1mindex 6e95949..a5377e8 100644[m
+[1m--- a/js/main.js[m
+[1m+++ b/js/main.js[m
+[36m@@ -1,5 +1,5 @@[m
+ [m
+[31m-// sticky footer[m
+[32m+[m[32m// MOBILE NAV[m
+ [m
+ const navMain = document.querySelector(".main-nav");[m
+ const navToggle = document.querySelector(".main-nav__toggle");[m
+[36m@@ -8,6 +8,7 @@[m [mconst mobileHeader = document.querySelector(".page-header__logo");[m
+ navMain.classList.remove("main-nav--nojs");[m
+ [m
+ navToggle.addEventListener("click", function () {[m
+[32m+[m
+   if (navMain.classList.contains("main-nav--closed")) {[m
+     navMain.classList.remove("main-nav--closed");[m
+     navMain.classList.add("main-nav--open");[m
+[36m@@ -21,15 +22,15 @@[m [mnavToggle.addEventListener("click", function () {[m
+   }else{[m
+    mobileHeader.style.display = "";[m
+   }[m
+[31m-});[m
+ [m
+[32m+[m[32m});[m
+ [m
+ [m
+[32m+[m[32m// STICKY HEADER[m
+ [m
+ const header = document.querySelector(".page-header");[m
+ const sticky = header.offsetTop;[m
+ [m
+[31m-[m
+ window.onscroll = function () { myFunction() };[m
+ function myFunction() {[m
+   if (window.pageYOffset > sticky) {[m
+[36m@@ -41,66 +42,5 @@[m [mfunction myFunction() {[m
+ [m
+ [m
+ [m
+[31m-// form[m
+[31m-[m
+[31m-const PopUpOpen = document.querySelector(".button-action")[m
+[31m-const PopUpBox = document.querySelector(".search-form-box")[m
+[31m-const checkInDate = PopUpBox.querySelector(".dateIn")[m
+[31m-const checkOutDate = PopUpBox.querySelector(".dateOut")[m
+[31m-const checkInName = PopUpBox.querySelector(".name")[m
+[31m-const PopUpWin = PopUpBox.querySelector(".search-form-window")[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-PopUpOpen.addEventListener("click", function (evt) {[m
+[31m-  evt.preventDefault();[m
+[31m-  PopUpBox.classList.toggle("search-form-show");[m
+[31m-  checkInDate.focus();[m
+[31m-[m
+[31m-});[m
+[31m-[m
+[31m-PopUpWin.addEventListener("submit", function (evt) {[m
+[31m-  if (!checkInDate.value, !checkOutDate.value || !checkInName.value) {[m
+[31m-    evt.preventDefault();[m
+[31m-  }[m
+[31m-});[m
+[31m-[m
+[31m-[m
+[31m-// hoverColor[m
+[31m-[m
+[31m-[m
+[31m-const container =  document.getElementById("container");[m
+[31m-    const color = ["#F5E94F","#C83C36","#407DE0","#E9725F","#A874EE","#377F83","#F1D3D2"];[m
+[31m-    [m
+[31m-    const SQUARES = 125;[m
+[31m-    [m
+[31m-    [m
+[31m-    for ( let i = 0; i<SQUARES; i++){[m
+[31m-        [m
+[31m-        let square = document.createElement("div")[m
+[31m-        square.classList.add("square")[m
+[31m-    [m
+[31m-        square.addEventListener('pointerover', () => setColor(square))[m
+[31m-        square.addEventListener('pointerout', () => removeColor(square))[m
+[31m-        container.appendChild(square)[m
+[31m-    }[m
+[31m-    [m
+[31m-    function setColor(element){[m
+[31m-      const color = getRandomColor()[m
+[31m-    [m
+[31m-      element.style.background = color[m
+[31m-      element.style.boxShadow = ` 0 0 2px ${color}, 0 0 10px ${color} `[m
+[31m-    }[m
+[31m-    [m
+[31m-    function removeColor(element){[m
+[31m-        element.style.background = '#363636'[m
+[31m-        element.style.boxShadow =  '0 2px 1px #00000066'[m
+[31m-    }[m
+[31m-    [m
+[31m-    function getRandomColor(){[m
+[31m-    [m
+[31m-    return color[Math.floor(Math.random() * color.length)] [m
+[31m-    [m
+[31m-    }[m
+[31m-    [m
+[32m+[m[32m// HOVER COLOR BOARD[m
+ [m
+[1mdiff --git a/js/video.js b/js/video.js[m
+[1mindex 7e7034a..5b618af 100644[m
+[1m--- a/js/video.js[m
+[1m+++ b/js/video.js[m
+[36m@@ -1,26 +1,28 @@[m
+[31m-	//VIDEO PLAYER SCRIPT[m
+[32m+[m
+ 	[m
+[31m-	let vid, video__pause, video__seek, video__bar, video__time, video__timeTotal, video__mute, video__volume, video__soundBar, fullscreenbtn;[m
+[32m+[m	[32mlet vid, videoPause, videoSeek,vidRep, videoBar, videoMute, videoVolume, videoSoundBar, fullscreenbtn;[m
+ 	[m
+ 	function intializePlayer(){[m
+ 	[m
+ 	vid = document.querySelector(".my_video");[m
+[31m-	video__seek = document.querySelector(".video__seek");[m
+[31m-	video__bar = document.querySelector(".video__bar");[m
+[31m-    video__pause = document.querySelector(".video__pause");[m
+[31m-		video__time = document.querySelector(".video__time");[m
+[31m-	video__timeTotal = document.querySelector(".video__time-total");[m
+[31m-	video__mute = document.querySelector(".video__mute");[m
+[32m+[m	[32mvideoSeek = document.querySelector(".video__seek");[m
+[32m+[m	[32mvideoBar = document.querySelector(".video__bar");[m
+[32m+[m[32m    videoPause = document.querySelector(".video__pause");[m
+[32m+[m	[32mvideoMute = document.querySelector(".video__mute");[m
+[32m+[m	[32mvidRep = document.querySelector(".video__replay");[m
+ [m
+ 	fullscreenbtn = document.querySelector(".fullscreenbtn");[m
+ 	[m
+ 	vid.addEventListener("click",playPause,false);[m
+ 	vid.addEventListener("timeupdate",seektimeupdate,false);[m
+[31m-fullscreenbtn.addEventListener("click",toggleFullScreen,false);	[m
+[31m-	[m
+[32m+[m[32m    fullscreenbtn.addEventListener("click",toggleFullScreen,false);[m[41m	[m
+[32m+[m	[32mvidRep.addEventListener("click",()=>{[m
+[32m+[m		[32mvid.currentTime = 0;[m
+[32m+[m	[32m})[m
+[32m+[m	[32mvideoPause.addEventListener("click",playPause,false)[m
+ [m
+ 	const timeDrag = false; /* Drag status */[m
+[31m-	video__seek.addEventListener( "pointerdown" , function(event) {[m
+[32m+[m	[32mvideoSeek.addEventListener( "pointerdown" , function(event) {[m
+ 		timeDrag = true;[m
+ 		updatebar(event.pageX);[m
+ 	});[m
+[36m@@ -35,24 +37,23 @@[m [mfullscreenbtn.addEventListener("click",toggleFullScreen,false);[m
+ 			updatebar(event.pageX);[m
+ 		}[m
+ 	});[m
+[31m-	[m
+[31m-	[m
+ }[m
+[31m-window.onload = intializePlayer;[m
+[31m-function playPause(){[m
+[32m+[m
+[32m+[m[32m  window.onload = intializePlayer;[m
+[32m+[m[32m  function playPause(){[m
+ 	if(vid.paused){[m
+ 		vid.play();[m
+ 		vid.style.background = "#00000099";[m
+[31m-		video__pause.style.backgroundImage = "url(/svg/play.svg)";[m
+[32m+[m		[32mvideoPause.style.backgroundImage="url(../svg/play.svg)";[m
+ 	} else {[m
+ 		vid.pause();[m
+[31m-		video__pause.style.backgroundImage = "url(/svg/pause.svg)";[m
+[32m+[m		[32mvideoPause.style.backgroundImage = "url(../svg/pause.svg)";[m
+ 	}[m
+ }[m
+ 	[m
+ [m
+[31m-const updatebar = function(x) {[m
+[31m-	const progress = video__seek;[m
+[32m+[m[32m   const updatebar = function(x) {[m
+[32m+[m	[32mconst progress = videoSeek;[m
+ 	const maxduration = vid.duration;[m
+ 	const position = x - progress.getBoundingClientRect().left;[m
+ 	const percentage = 100 * position / progress.offsetWidth;[m
+[36m@@ -65,13 +66,13 @@[m [mconst updatebar = function(x) {[m
+ 	}[m
+ 	[m
+ //	Update progress bar and video currenttime[m
+[31m-	video__bar.style.width = percentage + "%";[m
+[32m+[m	[32mvideoBar.style.width = percentage + "%";[m
+ 	vid.currentTime = maxduration * percentage / 100;[m
+ 	[m
+ };[m
+ [m
+[31m-const updateSound = function(x) {[m
+[31m-	const progress = video__volume;[m
+[32m+[m[32m  const updateSound = function(x) {[m
+[32m+[m	[32mconst progress = videoVolume;[m
+ 	const position = x - progress.getBoundingClientRect().left;[m
+ 	const percentage = 100 * position / progress.offsetWidth;[m
+ 	[m
+[36m@@ -82,42 +83,29 @@[m [mconst updateSound = function(x) {[m
+ 		percentage = 0;[m
+ 	}[m
+ 	[m
+[31m-	video__soundBar.style.width = percentage + "%";[m
+[31m-	vid.volume = percentage / 100;[m
+[31m-[m
+[31m-	[m
+[32m+[m	[32mvideoSoundBar.style.width = percentage + "%";[m
+[32m+[m	[32mvid.volume = percentage / 100;[m[41m	[m
+ };[m
+ 	[m
+ function seektimeupdate(){[m
+ 	const currentPos = vid.currentTime;[m
+ 	const maxduration = vid.duration;[m
+ 	const percentage = 100 * currentPos / maxduration;[m
+[31m-	video__bar.style.width=percentage+"%";[m
+[31m-	[m
+[31m-	const curmins = Math.floor(vid.currentTime / 60);[m
+[31m-	const cursecs = Math.floor(vid.currentTime - curmins * 60);[m
+[31m-	const durmins = Math.floor(vid.duration / 60);[m
+[31m-	const dursecs = Math.floor(vid.duration - durmins * 60);[m
+[31m-	if(cursecs < 10){ cursecs = "0"+cursecs; }[m
+[31m-	if(dursecs < 10){ dursecs = "0"+dursecs; }[m
+[31m-	if(curmins < 10){ curmins = "0"+curmins; }[m
+[31m-	if(durmins < 10){ durmins = "0"+durmins; }[m
+[31m-	video__time.innerHTML = curmins+":"+cursecs;[m
+[31m-	video__timeTotal.innerHTML = durmins+":"+dursecs;[m
+[32m+[m	[32mvideoBar.style.width=percentage + "%";[m
+ }[m
+ [m
+ function vidmute(){[m
+ 	if(vid.muted){[m
+ 		vid.muted = false;[m
+[31m-		video__mute.style.backgroundClip="border-box";[m
+[32m+[m		[32mvideoMute.style.backgroundClip="border-box";[m
+ 	} else {[m
+ 		vid.muted = true;[m
+[31m-		video__mute.style.backgroundClip="content-box";[m
+[32m+[m		[32mvideoMute.style.backgroundClip="content-box";[m
+ 	}[m
+ }[m
+ [m
+ function setvolume(){[m
+[31m-	vid.volume = video__volume.value / 100;[m
+[32m+[m	[32mvid.volume = videoVolume.value / 100;[m
+ }[m
+ [m
+ function toggleFullScreen(){[m
+[36m@@ -130,4 +118,3 @@[m [mfunction toggleFullScreen(){[m
+ 	}[m
+ }[m
+ 	[m
+[31m-	//END OF VIDEO PLAYER SCRIPT[m
+\ No newline at end of file[m

@@ -1,5 +1,3 @@
-
-
 img{
     border-radius: 3px;
 }
@@ -120,11 +118,13 @@ img{
     margin: 0;
     bottom: 10px;
     left: 0;
+    cursor: pointer;
   }
   
   .range-control .toggle-max {
     margin: 0;
     left: 238px;
+    cursor: pointer;
   }
   
   .range-filter {
